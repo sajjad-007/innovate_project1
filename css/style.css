@@ -1,0 +1,764 @@
+
+/* ======================Common Code start here===================== */
+:root{
+    --white: #fff;
+    --orange: #FF9600;
+    --black: #222;
+    --background: #0C3543;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    line-height: .8;
+}
+.container{
+    width: 1320px;
+    margin: 0 auto;
+}
+.common_btn{
+    width: 200px;
+    height: 60px;
+    padding: 20px 50px;
+    border-radius: 4px;
+    color: var(--white);
+    background-color: var(--orange);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    transition: all linear .3s;
+}
+.common_btn:hover{
+    background-color: var(--white);
+    color: var(--orange);
+}
+.sub_heading{
+    color: var(--black);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'Yellowtail', cursive;
+}
+.heading{
+    color: var(--black);
+    font-size: 54px;
+    font-weight: 700;
+    line-height: normal;
+}
+.para{
+    font-size: 18px;
+    font-weight: 400px;
+    line-height: normal;
+    color: var(--black);
+}
+
+/* ======================Common Code end here===================== */
+
+/* ======================navbar Code start here===================== */
+#navbar{
+    background: rgba(137, 43, 226, 0.046);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 3;
+}
+.nav_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.nav_logo{
+    width: 20%;
+}
+.nav_content{
+    width: 80%;
+}
+.nav_content ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+.nav_content> ul >li> a{
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    transition: all linear .3s;
+}
+.nav_content> ul >li> a:hover{
+    color: var(--orange);
+}
+.nav_content> ul >li{
+    position: relative;
+}
+.nav_content> ul >li> a i{
+    padding-left: 5px;
+    transition: all linear .2s;
+}
+.nav_content> ul >li> a:hover i{
+    transform: rotate(180deg);
+}
+.nav_content .dropdown{
+    position: absolute;
+    left: 0;
+    top: 48px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: var(--orange);
+    padding: 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+}
+.nav_content> ul >li:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+}
+.nav_content .dropdown li a{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.nav_button{
+    width: 20%;
+}
+.nav_button .common_btn i{
+    padding-left: 10px;
+}
+
+
+/* ======================navbar Code end here===================== */
+
+/* ======================banner Code start here===================== */
+#banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.454),rgba(0, 0, 0, 0.454)) ,url(../images/banner_img.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    padding: 335px 0 140px 0;
+    position: relative;
+}
+.ban_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ban_cont h1{
+    width: 819px;
+    color: var(--white);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 55px;
+}
+.ban_btn a:nth-child(2){
+    background-color: var(--white);
+    color: var(--orange);
+    margin-left: 20px;
+    transition: all linear .3s;
+}
+.ban_btn a:nth-child(2):hover{
+    background-color: var(--orange);
+    color: var(--white);
+}
+.ban_shape_img{
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    display: block;
+}
+.ban_shape_img img{
+    width: 100%;
+}
+/* ======================banner Code end here===================== */
+
+/* ==================Embar section Code start here=============== */
+#embark{
+    padding-top: 72px;
+    padding-bottom: 85px;
+}
+.embark_wrapper{
+    display: flex;
+    column-gap: 70px;
+}
+.embark_cont{
+    width: 600px;
+}
+.embark_cont .sub_heading{
+    color: #14B9F1;
+}
+.embark_cont .heading{
+    width: 595px;
+    margin-bottom: 62px;
+    position: relative;
+}
+.embark_cont .heading::after{
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: #A0A0A0;
+    left: 0;
+    bottom: -30px;
+}
+.embark_cont .para{
+    width: 590px;
+}
+.paragraph_cont{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 23px;
+}
+.embark_circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #EEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.embark_circle i{
+    color: var(--black);
+}
+.embark_btn{
+    margin-top: 40px;
+    margin-left: 4px;
+    transition: all linear .3s;
+}
+.embark_btn .common_btn:hover{
+    border: 1px solid black;
+}
+.embark_pics{
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+.embark_pics .embark_pic1{
+    width: 300px;
+    height: 620px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.embark_pics .embark_pic1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.embark_pics .embark_pic1:nth-child(2){
+    height: 520px;
+}
+/* ==================Embar section Code end here================== */
+
+/* ====================Count section Code start here============== */
+.count{
+    padding-bottom: 203px;
+}
+.count_wrapper{
+    display: flex;
+    column-gap: 24px;
+    justify-content: space-between;
+}
+.count_items{
+    width: 312px;
+    height: 220px;
+    padding: 40px 84px 45px 84px;
+    text-align: center;
+    background-color: rgba(14, 152, 180, 0.26);
+    position: relative;
+}
+.count_items::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/stat-bg\ 2.png);
+}
+.count_items span{
+    font-size: 80px;
+    color: var(--black);
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 8px;
+}
+.count_wrapper .count_items:nth-child(2){
+    background-color: rgba(14, 180, 47, 0.26);
+}
+.count_wrapper .count_items:nth-child(3){
+    background-color: rgba(141, 180, 14, 0.26);
+}
+.count_wrapper .count_items:nth-child(4){
+    background-color: rgba(33, 14, 180, 0.26);
+}
+/* ====================Count section Code end here============ */
+
+/* ==============Sports Section Code start here========= */
+#sports{
+    background-color: var(--background);
+    
+}
+.sports_cont_wrapper{
+    display: flex;
+    align-items: center;
+    padding-bottom: 91px;
+
+}
+.sports_headings .sub_heading{
+    color: var(--orange);
+    padding-top: 102px;
+}
+.sports_headings .heading{
+    color: var(--white);
+    width: 594px;
+    position: relative;
+}
+.sports_headings .heading::after{
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: var(--white);
+    left: 0;
+    bottom: 0;
+}
+.sports_paragraph .para{
+    color: var(--white);
+    width: 638px;
+    padding-top: 140px;
+}
+.sports_gallery{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 50px;
+    padding-left: 0;
+}
+.sports_gal_items{
+    width: 424px;
+    background-color: #0F4152;
+    border-radius: 0 0 10px 10px;
+}
+.sports_gal_img{
+    width: 424px;
+    height: 365px;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+.sports_gal_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.sports_gal_cont{
+    padding: 27px 98px 32px 98px;
+    text-align: center;
+}
+.sports_gal_cont h4{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--white);
+    width: 229px;
+}
+.sports_gal_cont .para{
+    color: var(--white);
+    padding-top: 24px;
+}
+.extrem_sports h1{
+    font-size: 162px;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'Arizonia', cursive;
+    margin-top: 83px;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+}
+.extrem_sports h1::after{
+    position: absolute;
+    content: "";
+    left: -250px;
+    top: -88px;
+    background-image: url(../images/bg-sports-1\ shape.png);
+    width: 1840px;
+    height: 185px;
+}
+.sports_shape{
+    width: 100%;
+}
+.sports_shape img{
+    width: 100%;
+    display: block;
+}
+/* ==============Sports Section Code end here============ */
+
+/* ==============Max section Code start here========== */
+#max{
+    padding: 106px 0 12px 0;
+    background-color: var(--orange);
+}
+.max_cont{
+    text-align: center;
+}
+.max_con_heading h2{
+    width: 1298px;
+    color: var(--white);
+    padding: 26px 0 46px 0;
+}
+.max_con_heading h6{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--white);
+    padding-bottom: 60px;
+}
+.max_btn{
+    padding-bottom: 19px;
+}
+.max_btn .common_btn:nth-child(1){
+    background-color: var(--background);
+    color: var(--white);
+    transition: all linear .3s;
+}
+.max_btn .common_btn:nth-child(1):hover{
+    background-color: var(--white);
+    color: var(--orange);
+}
+.max_btn .common_btn:nth-child(2) i{
+    padding-right: 12px;
+}
+.max_btn .common_btn:nth-child(2){
+    background-color: var(--orange);
+    color: var(--white);
+    border: 1px solid var(--white);
+    margin-left: 10px;
+    transition: all linear .3s;
+}
+.max_btn .common_btn:nth-child(2):hover{
+    background-color: var(--background);
+    color: var(--white);
+    border: none;
+}
+.max_gallery{
+    display: flex;
+    column-gap: 24px;
+    margin-top: 19px;
+}
+.max_img_cont{
+    width: 424px;
+    height: 470px;
+    padding: 234px 98px 34px 65px;
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.409),rgba(0, 0, 0, 0.409)) ,url(../images/max_img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    overflow: hidden;
+}
+.max_gallery .max_img_cont:nth-child(2){
+    background: linear-gradient(rgba(0, 0, 0, 0.444),rgba(0, 0, 0, 0.45)) ,url(../images/max_img2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.max_gallery .max_img_cont:nth-child(3){
+    background: linear-gradient(rgba(0, 0, 0, 0.508),rgba(0, 0, 0, 0.495)) ,url(../images/max_img3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.max_img_cont h3{
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+    width: 261px;
+}
+.max_img_cont h5{
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    width: 164px;
+    padding-top: 19px;
+    position: relative;
+
+}
+.max_img_cont .para{
+    color: #A0A0A0;
+    width: 218px;
+    padding-top: 70px;
+    position: relative;
+}
+.max_img_cont .para ::after{
+    position: absolute;
+    content: "";
+    width: 285px;
+    height: 1px;
+    left: 0;
+    top: 31px;
+    background-color: #717171;
+}
+.max_img_cont .para i{
+    padding-left: 15px;
+}
+/* ==============Max section Code end here============ */
+
+/* ==============Choose section Code start here========== */
+#choose{
+    margin: 192px 0 54px 0;
+
+}
+.chose_hedings{
+    text-align: center;
+    
+}
+.chose_hedings .sub_heading{
+    color: #14B9F1;
+}
+.chose_hedings .heading{
+    margin: 5px 0 55px 0;
+}
+.chose_item_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 24px;
+}
+.chose_items{
+    width: 312px;
+    padding: 22px 19px 45px 19px;
+}
+.chose_circle{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background-color: rgba(222, 224, 198, 0.819);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+}
+.chose_item_wrapper .chose_items:nth-child(2) .chose_circle {
+    background-color: rgba(0, 128, 0, 0.31);
+}
+.chose_item_wrapper .chose_items:nth-child(3) .chose_circle {
+    background-color: rgba(190, 207, 7, 0.371);
+}
+.chose_item_wrapper .chose_items:nth-child(4) .chose_circle{
+    background-color: rgba(111, 0, 128, 0.251);
+}
+
+.chose_cont{
+    text-align: center;
+}
+.chose_cont h5{
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    width: 250px;
+    padding: 56px 0 16px 0;
+}
+
+.chose_cont .para{
+    width: 275px;
+}
+/* ==============Choose section Code end here============ */
+
+/* ==============Sports news Code start here========== */
+#sports_news{
+    padding: 101px 0 128px 0;
+}
+.sports_news_wrapper{
+    display: flex;
+    align-items: center;
+    column-gap: 147px;
+}
+.sports_news_headings h3{
+    color: var(--orange);
+    margin-bottom: 5px;
+}
+.sports_news_headings h2{
+    width: 407px;
+    position: relative;
+}
+.sports_news_headings h2::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: var(--black);
+    left: 0;
+    bottom: -39px;
+}
+.sports_news_paragraph .para{
+    width: 638px;
+}
+.sports_news_gallery{
+    margin-top: 101px;
+    display: flex;
+    column-gap: 24px;
+}
+.sports_news_gal_items{
+    width: 424px;
+    border-radius: 0 0 10px 10px;
+}
+.sports_news_gal_img{
+    width: 424px;
+    height: 300px;
+    overflow: hidden;
+    /* border-radius: 10px 10px 0 0; */
+}
+.sports_news_gal_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sports_news_gal_cont{
+    padding: 27px 29px 37px 29px;
+    text-align: center;
+    background-color: var(--white);
+    border: 1px solid var(--orange);
+    border-top: none;
+}
+.sports_news_gal_cont h4{
+    width: 315px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+.sports_news_gal_cont .para{
+    width: 365px;
+    padding-bottom: 75px;
+}
+.sports_news_gal_cont .anchor a{
+    color: var(--orange);
+    text-transform: capitalize;
+}
+/* ==============Sports news Code end here============ */
+
+/* ==============logo secton Code start here========== */
+.logo_wrapper{
+    display: flex;
+    align-items: center;
+}
+.logo_items{
+    width: 264px;
+    height: 254px;
+    overflow: hidden;
+}
+.logo_items img{
+    padding: 58px 62px;
+}
+/* ==============logo secton Code end here============ */
+
+/* ==============footer section Code start here========== */
+#footer{
+    margin-top: 45px;
+    background-color: var(--background);
+}
+.footer_main_wrapper{
+    display: flex;
+    column-gap: 138px;
+}
+.footer_img{
+    width: 662px;
+    height: 705px;
+    overflow: hidden;
+}
+.footer_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footer_cont{
+    padding-top: 80px;
+}
+.footer_cont_part1{
+    display: flex;
+    column-gap: 60px;
+    /* align-items: center; */
+}
+.footer-btn{
+    padding-top: 50px;
+    position: relative;
+}
+.footer-btn::after{
+    position: absolute;
+    content: "";
+    width: 821px;
+    height: 1px;
+    background-color: rgba(196, 196, 196, 0.50);
+    left: 0;
+    bottom: -106px;
+}
+.footer_paragraph .para{
+    color: var(--white);
+    width: 560px;
+    padding-top: 100px;
+}
+.footer_cont_part2{
+    padding-top: 148px;
+    display: flex;
+    column-gap: 260px;
+}
+.footer_cont_part2 .text h2{
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    position: absolute;
+}
+.footer_cont_part2 .text h2::after{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 80px;
+    left: 0;
+    bottom: -26px;
+    background-color:  rgba(196, 196, 196, 0.50);
+
+}
+.footer_cont_part2 address p{
+    margin-bottom: 26px;
+    color: var(--white);
+}
+.footer_cont .copyright{
+    padding-top: 48px;
+    color: var(--white);
+}
+/* ==============footer section Code end here============ */
+
+/* ==============Common Code start here========== */
+/* ==============Common Code end here============ */
